@@ -1,3 +1,5 @@
+import Footer from "../components/footer/footer"
+
 function Home() {
     return (
         <>
@@ -49,6 +51,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

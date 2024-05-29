@@ -23,7 +23,6 @@ function App() {
             <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
           </Routes>
         </div>
-        <Footer />
       </BrowserRouter>
     </>
   );
