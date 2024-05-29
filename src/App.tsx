@@ -1,26 +1,32 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Navbar from './components/navbar/Navbar'
-import Home from './pages/Home'
-import Footer from './components/footer/footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import DeletarCategoria from './components/categorias/deletarcategorias/DeletarCategoria';
+import FormCategoria from './components/categorias/formcategoria/FormCategoria';
+import ListarCategorias from './components/categorias/listarcategorias/ListarCategorias';
+import Navbar from './components/navbar/Navbar';
+import Home from './pages/Home';
+import Footer from './components/footer/footer';
 
 function App() {
-  return (
 
+  return (
     <>
       <BrowserRouter>
         <Navbar />
-          <div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-            </Routes>
-          </div>
+        <div className='min-h-[90vh] bg-gray-200'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/categorias" element={<ListarCategorias />} />
+            <Route path="/cadcategoria" element={<FormCategoria />} />
+            <Route path="/editarcategoria/:id" element={<FormCategoria />} />
+            <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </>
-
-  )
+  );
 }
 
 export default App
